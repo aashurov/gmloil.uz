@@ -42,3 +42,22 @@ password: 1bd4c30c
 sudo chmod u+x git.sh
 ./git.sh
 
+//gmloil.uz
+FTP user profile
+User：ftp_gmloil_uz
+Password：85if2RwKGHMd26JB
+
+Database user profile
+Database name：sql_gmloil_uz
+User：sql_gmloil_uz
+Password：gmloil.uz
+
+//roaits.uz
+FTP user profile
+User：ftp_roaits_uz
+Password：roaits.uz
+
+Database user profile
+Database name：sql_roaits_uz
+User：sql_roaits_uz
+Password：roaits.uz

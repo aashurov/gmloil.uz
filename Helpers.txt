@@ -1,0 +1,44 @@
+1. Download Keys
+2. Rename key to "id_rsa_hostname.key"
+3. Move key to ˜/.ssh/id_rsa_hostname
+4. ssh-add /Users/kdbiosdeveloper/.ssh/id_rsa_150.136.104.201.key
+5. ssh-add -D
+6. chmod 600 /Users/kdbiosdeveloper/.ssh/id_rsa_150.136.104.201 OR  cd /Users/kdbiosdeveloper/.ssh
+7. ssh ubuntu@150.136.104.201
+
+chmod 400 id_rsa_150.136.104.201.key
+ssh -i "id_rsa_150.136.104.201.key" ubuntu@150.136.104.201
+sudo fallocate -l 4096M /root/swapfile
+sudo ls -lh /root/swapfile
+sudo chmod 600 /root/swapfile
+sudo mkswap /root/swapfile
+sudo swapon /root/swapfile
+sudo swapon -s
+sudo nano /etc/fstab
+/root/swapfile  none    swap    sw      0       0
+sudo reboot
+sudo apt update -y
+sudo apt upgrade -y
+sudo nano /etc/iptables/rules.v4
+delete all line with 80 for that click dd
+-A INPUT -p tcp -m --dport 443 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp -m --dport 80 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp -m --dport 7800 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp -m --dport 5432 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp -m --dport 8888 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp -m --dport 888 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp -m --dport 20 -m state --state NEW -j ACCEPT
+-A INPUT -p tcp -m --dport 21 -m state --state NEW -j ACCEPT
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -F
+
+aaPanel Internet Address: https://150.136.104.201:7800/3b917434
+aaPanel Internal Address: https://10.0.0.189:7800/3b917434
+username: rgyxrf5q
+password: 1bd4c30c
+
+sudo chmod u+x git.sh
+./git.sh
+

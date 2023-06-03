@@ -38,3 +38,7 @@ aaPanel Internet Address: https://150.136.104.201:7800/3b917434
 aaPanel Internal Address: https://10.0.0.189:7800/3b917434
 username: rgyxrf5q
 password: 1bd4c30c
+
+sudo chmod u+x git.sh
+./git.sh
+
